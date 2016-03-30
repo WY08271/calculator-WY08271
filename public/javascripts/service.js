@@ -33,6 +33,9 @@ Service.prototype.add = function(service, callback) {
         type: 'POST',
         data: { one: this.one, two: this.two }
     }).done(function(result) {
+        service.one = undefined;
+        service.two = undefined;
+        service.symbol = undefined;
         callback(result);
     });
 };
@@ -44,6 +47,9 @@ Service.prototype.cut = function(service, callback) {
         data: { one: this.one, two: this.two }
     })
         .done(function(result) {
+            service.one = undefined;
+            service.two = undefined;
+            service.symbol = undefined;
             callback(result);
         });
 };
@@ -55,6 +61,9 @@ Service.prototype.multiply = function(service, callback) {
         data: { one: this.one, two: this.two }
     })
         .done(function(result) {
+            service.one = undefined;
+            service.two = undefined;
+            service.symbol = undefined;
             callback(result);
         });
 };
@@ -66,6 +75,9 @@ Service.prototype.divide = function(service, callback) {
         data: { one: this.one, two: this.two }
     })
         .done(function(result) {
+            service.one = undefined;
+            service.two = undefined;
+            service.symbol = undefined;
             callback(result);
         });
 };
