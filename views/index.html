@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/style.css"/>
+</head>
+
+<body>
+<section class="t-box">
+    <div class="c-box">
+        <div class="calculator-holder">
+            <table class="calculator">
+                <tbody>
+                <tr>
+                    <td colspan="4">
+                        <input maxlength="6" id="screenNumber" type="text" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="AC" class="reset-button">AC</button>
+                    </td>
+                    <td>
+                        <button id="opposite" class="opposite-button">+/-</button>
+                    </td>
+                    <td>
+                        <button id="percent" class="percent-button">%</button>
+                    </td>
+                    <td>
+                        <button id="divide" data-action="divide" class="action-button">&divide;</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="7" class="number-button">7</button>
+                    </td>
+                    <td>
+                        <button id="8" class="number-button">8</button>
+                    </td>
+                    <td>
+                        <button id="9" class="number-button">9</button>
+                    </td>
+                    <td>
+                        <button id="multiply" data-action="multiply" class="action-button">&#215;</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="4" class="number-button">4</button>
+                    </td>
+                    <td>
+                        <button id="5" class="number-button">5</button>
+                    </td>
+                    <td>
+                        <button id="6" class="number-button">6</button>
+                    </td>
+                    <td>
+                        <button id="cut" data-action="cut" class="action-button">&minus;</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="1" class="number-button">1</button>
+                    </td>
+                    <td>
+                        <button id="2" class="number-button">2</button>
+                    </td>
+                    <td>
+                        <button id="3" class="number-button">3</button>
+                    </td>
+                    <td>
+                        <button id="add" data-action="add" class="action-button">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="0" class="number-button">0</button>
+                    </td>
+                    <td>
+                        <button id="point" class="number-button">.</button>
+                    </td>
+                    <td>
+                        <button id="equal" class="equal-button">=</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<script src="javascripts/jquery/dist/jquery.min.js"></script>
+
+<script src="javascripts/script.js"></script>
+<script src="javascripts/service.js"></script>
+</body>
+</html>
