@@ -29,6 +29,44 @@ $(document).ready(function() {
         var result = linkNumber(screenNumber, inputNumber);
         $('#screenNumber').val(result);
     });
+
+    $('#equal').on('click', function() {
+        if (service.one !== undefined) {
+            service.two = $('#screenNumber').val();
+
+            switch (service.symbol) {
+                case 'add':
+                    service.add(service, setScreen); break;
+                case 'cut':
+                    service.cut(service, setScreen); break;
+                case 'multiply':
+                    service.multiply(service, setScreen); break;
+                case 'divide':
+                    service.divide(service, setScreen); break;
+            }
+        }
+    });
+
+    $('.action-button').on('click', function() {
+        if (service.one === undefined) {
+            service.one = $('#screenNumber').val();
+            service.symbol = this.getAttribute('data-action');
+            setScreen('');
+        } else {
+            service.two = $('#screenNumber').val();
+
+            switch (service.symbol) {
+                case 'add':
+                    service.add(service, setScreen); break;
+                case 'cut':
+                    service.cut(service, setScreen); break;
+                case 'multiply':
+                    service.multiply(service, setScreen); break;
+                case 'divide':
+                    service.divide(service, setScreen); break;
+            }
+        }
+    });
 });
 
 function setScreen(number) {
